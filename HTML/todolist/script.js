@@ -8,7 +8,7 @@ function get_todos() {
 }
 
 function add() {
-  var task = document.createElement("task").value;
+  var task = document.getElementById("task").value;
 
   var todos = get_todos();
   todos.push(task);
@@ -50,7 +50,7 @@ function show() {
   }
   html += "<ul>";
 
-  document.getElementsById("todos").innerHTML = html;
+  document.getElementById("todos").innerHTML = html;
 
   var buttons = document.getElementsByClassName("remove");
   for (var i = 0; i < buttons.length; i++) {
