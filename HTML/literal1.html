@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>literal example</title>
+</head>
+<body>
+  <script>
+    const color = 'red';
+
+const Car = {
+  color: color,
+  drive() {
+    return 'Vroom!';
+  },
+  getColor() {
+    return this.color;
+  }
+};
+
+console.log(Car);
+console.log(Car.drive());
+console.log(Car.getColor());
+  </script>
+</body>
+</html>
