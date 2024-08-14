@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator</title>
+</head>
+<body>
+  <script>
+    function* shopping(){
+      //stuff on the sidewalks
+
+      //walking down the sidewalk
+      //gon into the store with the cash 
+
+      const stuffFromStore = yield 'cash';
+      //walking to laundry place
+      const cleanClothes = yield 'laundry';
+      //walking back home
+      return [stuffFromStore,cleanClothes];
+    }
+
+    // stuff in the store
+    const gen = shopping();
+    gen.next();  
+    // leaving our house
+    // walked into the store
+    // walking up and down the aisles..
+    // purchase our staff
+    gen.next('groceries'); // leaving the store with groceries
+    gen.next('clean clothes');
+    
+console.log(gen.next());
+console.log(gen.next('groceries'));
+console.log(gen.next('clean clothes'));
+  </script>
+</body>
+</html>

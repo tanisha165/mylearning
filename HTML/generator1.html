@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator1</title>
+</head>
+<body>
+  <script>
+    // function* colors(){
+    //   yield 'red';
+    //   yield 'blue';
+    //   yield 'green';
+    // }
+
+    // const myColors = [];
+    // for (let color of colors()){
+    //   myColors.push(color);
+    // }
+    // myColors;
+    // console.log(myColors);
+
+
+    const testingTeam = {
+      lead:'Amanda',
+      tester:'Bill',
+      [Symbol.iterator]: function* () {
+        yield this.lead;
+        yield this.tester;
+      }
+    };
+
+    const engineeringTeam = {
+      testingTeam,
+      size : 3,
+      department:  'Engineering',
+      lead : 'Jill',
+      manager: 'alex',
+      engineer: 'dave',
+      [Symbol.iterator]: function* (){
+        yield this.lead;
+        yield this.manager;
+        yield this.engineer;
+        yield this.testingTeam;
+      }
+    };
+
+    const names = [];
+    for (let name of (engineeringTeam)){
+      names.push(name);
+    }
+    names;
+    console.log(names);
+  </script>
+</body>
+</html>
+
+
+ 

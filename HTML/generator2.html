@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator and Recursion</title>
+</head>
+<body>
+  <script>
+    class Comment{
+  constructor(content,children){
+    this.content = content;
+    this.children = children;
+  }
+}
+
+const children = [
+   new Comment('good comment',[]),
+   new Comment('bad comment',[]),
+   new Comment('meh',[])
+];
+
+const tree = new Comment('Great post!',children);
+
+ const values = [];
+ for ( let value of tree ) {
+    values.push(value);
+ }
+ values;
+ console.log(values);
+  </script>
+</body>
+</html>

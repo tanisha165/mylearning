@@ -11,31 +11,31 @@
     <button id="startButton">Start Processing</button>
 
     <script>
-        // Function that returns a promise to double a number after a delay
+        
         function doubleAfterDelay(number) {
             return new Promise((resolve) => {
                 setTimeout(() => {
                     resolve(number * 2);
-                }, 1000); // 1-second delay
+                }, 1000); 
             });
         }
 
-        // Function to process an array of numbers using Promises and map
+        
         function processNumbers() {
             const numbers = [1, 2, 3, 4, 5];
             const resultElement = document.getElementById('result');
 
-            // Use map to process each number asynchronously
+         
             const promises = numbers.map(doubleAfterDelay);
 
-            // Use Promise.all to wait for all promises to complete
+            
             Promise.all(promises).then((doubledNumbers) => {
-                // Display the doubled numbers
+                
                 resultElement.textContent = 'Doubled Numbers: ' + doubledNumbers.join(', ');
             });
         }
 
-        // Add event listener to the button
+        
         document.getElementById('startButton').addEventListener('click', processNumbers);
     </script>
 </body>
