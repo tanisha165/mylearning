@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci series</title>
+</head>
+<body>
+  <script>
+    const fibonacci = function(n){
+      if(n<3){
+        return 1
+      }
+      else {
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
+  }
+  console.log(fibonacci(8));
+
+
+  // console.log(console.log(n + " * " + i +
+  //   " = " + n * i););
+
+
+  // <button onclick="generateTable()">Generate Table</button>
+
+//   const generateTable = () => {
+//     const numberInput = document.getElementById('number1').value;
+//     const number = parseInt(numberInput, 10);
+
+//     if (isNaN(number)) {
+//         alert('Please enter a valid number');
+//         return;
+//     }
+
+//     const tableForNumber = multiply(number);
+//     document.getElementById('output').textContent = tableForNumber;
+// };
+  </script>
+</body>
+</html>

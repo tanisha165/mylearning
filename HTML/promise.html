@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise</title>
+</head>
+<body>
+  <script>
+    promise = new Promise((resolve,reject) => {
+
+        var request = new XHTMLRequest()
+        //make request
+        request.onload = () =>{
+          resolve();
+        };
+      // setTimeout(() => {
+      //   reject();
+      // }, 3000);
+      
+
+      //const persons = [
+//   {firstname : "Malcom", lastname: "Reynolds"},
+//   {firstname : "Kaylee", lastname: "Frye"},
+//   {firstname : "Jayne", lastname: "Cobb"}
+// ];
+
+// persons.map(getFullName);
+
+// function getFullName(item) {
+//   return [item.firstname,item.lastname].join(" ");
+// }
+    });
+
+    promise.then(() => console.log('finally finished'))
+           .then(() => console.log('i ran off!!'))
+           .catch(() => console.log("rejected"));
+  </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rest Arguments</title>
+</head>
+<body>
+  <script>
+    // function addNumbers(...numbers){
+    //   return numbers.reduce((sum,number) => {
+    //     return sum + number;
+    //   }, 0);
+    // }
+    // document.write(addNumbers(1,2,3,4,5,6,7,8,9,10));
+
+    // spread operator //
+  //   function validateShoppingList(...items){
+  //     if(items.indexOf('milk') < 0){
+  //       return ['milk',...items ];
+  //     }
+  //     return items;
+  //   }
+  //   validateShoppingList('orange','bread','eggs');
+  //  document.write(validateShoppingList.items);
+
+
+//   let num1=[1,2,3];
+// let num2=[4,5,6];
+
+// function join(array1, array2) {
+//     return [...array1   ,...array2]
+//   }
+
+//   console.log(join(num1,num2))
+
+
+// let array1=[1,2,3];
+// let array2=[4,5,6];
+
+// function unshift(...array1,...array2) {
+//     return [array1,...array2];
+//   }
+
+
+//   console.log(unshift(array1,array2));
+  function product(...fun) {
+    
+    return fun.reduce(function(acc, number) {
+      return acc * number;
+    }, 1)
+  }
+
+console.log(product(1,3));
+
+  </script>
+</body>
+</html>

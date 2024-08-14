@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Literals</title>
+</head>
+<body>
+  <script>
+    function createBookShop(inventory){
+      return {
+        inventory: inventory,
+        inventoryValue: function(){
+          return this.inventory.reduce((total,book) => total + book.price,0);
+        },
+        priceForTitle:function(title){
+          return this.inventory.find(book => book.title === title).price;
+        }
+      };
+    }
+    
+    const inventory =[
+      {title:'Harry Potter', price:10},
+      {title:'javascript', price:15}
+    ];
+
+    const bookShop = createBookShop(inventory);
+
+
+    console.log(bookShop.priceForTitle('javascript'));
+    bookShop.inventoryValue();
+    bookShop.priceForTitle('javascript');
+    </script>
+</body>
+</html>

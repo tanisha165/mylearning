@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>class</title>
+</head>
+<body>
+  <script>
+   class Monster {
+  constructor(options) {
+    this.health = 100;
+    this.name = options.name;
+  }
+}
+
+class Snake extends Monster {
+  bite(targetSnake) {
+    if (targetSnake instanceof Snake) {
+      targetSnake.health -= 10;
+    } else {
+      throw new Error('Target must be an instance of Snake');
+    }
+  }
+}
+
+
+const snake1 = new Snake({ name: 'Python' });
+const snake2 = new Snake({ name: 'Cobra' });
+
+console.log(snake2.health);
+
+snake1.bite(snake2);
+
+console.log(snake2.health);
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let Example</title>
+</head>
+<body>
+  <script>
+    function count(targetString) {
+      const characters = ['a', 'e', 'i', 'o', 'u'];
+      let number = 0;
+
+      for (let i = 0; i < targetString.length; i++) {
+        if (characters.includes(targetString[i].toLowerCase())) {
+          number++;
+        }
+      }
+
+      console.log(number);  // Print the result to the console
+      return number;        // Return the result
+    }
+
+    // Call the function and output the result
+    count('aeiobzxceiaipbiox');
+  </script>
+</body>
+</html>

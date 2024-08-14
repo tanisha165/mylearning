@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destructring</title>
+</head>
+<body>
+  <script>
+    // var expense ={
+    //   type:'Business',
+    //   amount:'$45 USD'
+
+    // };
+    // const { type  ,amount } = expense;
+    // type;
+    // amount;
+    // console.log(expense);
+
+
+    //
+    const points =[
+      [4,5],
+      [10,1],
+      [0,40]
+    ];
+
+    points.map(([x,y]) =>{
+      return {x,y};
+    });
+    console.log(points);
+  
+    // var savedFiled ={
+    //   extension:'jpg',
+    //   name:'report',
+    //   size: 14040
+    // };
+
+    // function fileSummary({name,extension,size},{colors}){
+    //   return `${colors} The file ${name}.${extension} is of size ${size}`;
+    // }
+    // document.write(fileSummary(savedFiled,{color:'red'}));
+    
+  </script>
+</body>
+</html>
